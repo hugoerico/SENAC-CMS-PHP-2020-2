@@ -15,3 +15,25 @@ function altera_msg_login(){
 
     return 'credenciais inválidas!!!';
 }
+
+add_action('wp_head', 'colocar_og_tags');
+
+function colocar_og_tags(){
+
+    if(is_single()){
+        $dados= get_post(get_the_ID());
+        $nomedosite= get_bloginfo();
+        $resumo = $dados->post_excerpt;
+        $titulo = $dados->post_title;
+
+        echo " <meta property='og:title' content='" . $titulo . "'>\n
+        
+        
+        <meta property='og:site_name' content='" . $nomedosite . "'>\n
+        
+        <meta property='og:url' content='" . get_permalink() . "'>\n
+        
+        <meta property='og:description' content='" . $resumo . "'>\n";
+    }
+
+}

@@ -9,6 +9,14 @@
 * License: CC BY
 */
 
+add_action('admin_init', 'set_configs');
+
+function set_configs()
+{
+}
+
+
+
 add_action('admin_menu', 'menu_do_meu_plugin');
 function menu_do_meu_plugin()
 {

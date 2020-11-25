@@ -30,8 +30,8 @@
         
         ?>
         <tr>
-            <td><input type="text" name="nome"></td>
-            <td><input type="text" name="whatsapp"></td>
+            <td><input type="text" name="nome" placeholder="Nome"></td>
+            <td><input type="text" name="whatsapp" placeholder="Whatsapp"></td>
             <td><?php submit_button('Gravar'); ?></td>
             
         </tr>
